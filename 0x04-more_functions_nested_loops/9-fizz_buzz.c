@@ -1,8 +1,10 @@
 #include <stdio.h>
-
 /**
- * Program that prints numbers from 1 to 100
- * and words fizz, buzz, or fizzbuzz depending on the situation
+ * main - Entry point
+ *
+ * Description: 'Program to print numbers from 1 to 100'
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -12,19 +14,23 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (i % 3 == 0)
 		{
-			printf("Fizz ");
-		} 
+			printf("Fizz");
+		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz ");
-		} 
+			printf("Buzz");
+		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d", i);
+		}
+		if (i != 100)
+		{
+			printf(" ");
 		}
 	}
 	return (0);
