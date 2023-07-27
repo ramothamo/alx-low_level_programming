@@ -1,29 +1,25 @@
 #include "main.h"
+#include <string.h>
 
 /**
- * _strcat - function that concatenates two strings.
- * @src: cadena a copiar
- * @dest: destino de la cadena.
+ * _strncat -  function that concatenates two strings.
+ * @src: first pointer variabler
+ * @dest: variable used
+ * @n: number.
  * Return: dest.
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-	int j;
+	int index = strlen(dest);
+	int a = 0;
 
-	i = 0;
-	while (dest[i] != '\0')
+	while (a < n && *src)
 	{
-		i++;
+		dest[index + a] = *src;
+		src++;
+		a++;
 	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
+	dest[index + a] = '\0';
 	return (dest);
 }
